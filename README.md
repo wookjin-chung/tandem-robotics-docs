@@ -4,6 +4,7 @@ Official documentation hub for Tandem Robotics GitHub PBL coaching and learning 
 
 이 레포는 **Tandem Robotics GitHub PBL 코칭 서비스의 유일한 안내판**입니다.  
 처음 오셨다면, 아래 순서만 따라오시면 됩니다.
+👉 **처음 오셨다면 여기부터:** [Start / 00. Quick Start](start/00_quick_start.md)
 
 ---
 
