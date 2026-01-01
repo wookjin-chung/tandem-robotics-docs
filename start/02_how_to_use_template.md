@@ -41,6 +41,16 @@ GitHub 기능 설명이 아니라, **어디에 무엇을 써야 하는지**에 �
 Starter Template에는 이미 **기록을 위한 최소 구조**가 준비되어 있습니다.
 
 일반적인 구조 예시는 다음과 같습니다.
+
+```text
+README.md
+LOG.md
+episodes/
+├─ episode_001/
+│ └─ README.md
+├─ episode_002/
+│ └─ README.md
+
 (실제 구조는 템플릿 버전에 따라 약간 다를 수 있습니다)
 
 ---
@@ -109,6 +119,8 @@ Starter Template에는 이미 **기록을 위한 최소 구조**가 준비되어
 - 실패한 상태 그대로 커밋 가능
 
 권장 커밋 메시지 예:
+
+Episode 001: initial problem definition
 
 📌 커밋은 **완성의 표시가 아니라, 생각이 한 번 이동했다는 표시**입니다.
 
