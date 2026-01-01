@@ -50,6 +50,7 @@ episodes/
 │ └─ README.md
 ├─ episode_002/
 │ └─ README.md
+```
 
 (실제 구조는 템플릿 버전에 따라 약간 다를 수 있습니다)
 
