@@ -1,22 +1,29 @@
-# PBL Quick Start
+---
+title: "00. Quick Start"
+subtitle: "길을 잃지 않는 시작"
+order: 0
+category: start
+---
 
-이 문서는 **Tandem Robotics GitHub PBL을 지금 시작하기 위한 최소 실행 가이드**입니다.  
+# 00. Quick Start — 길을 잃지 않는 시작
+
+이 문서는 **Tandem Robotics GitHub PBL을 지금 바로 시작하기 위한 최소 실행 가이드**입니다.  
 설명보다 **행동이 먼저**입니다.
 
 ---
 
 ## STEP 0 — 나는 어디서 시작하나요?
 
-아래 중 **하나만** 고르세요.
+아래 중 **하나만** 선택하세요.
 
 - **C++ 코드 구조가 아직 낯설다**  
-  → 👉 [SelfAbot 저장소](https://github.com/wookjin-chung/SelfAbot)
+  → 👉 **[SelfAbot 저장소](https://github.com/wookjin-chung/SelfAbot)**
 
 - **바로 로봇 PBL을 시작하고 싶다**  
-  → 👉 [PBL Starter Template](https://github.com/wookjin-chung/tandem-pbl-starter-template)
+  → 👉 **[PBL Starter Template](https://github.com/wookjin-chung/tandem-pbl-starter-template)**
 
 > 이 선택은 **실력 평가가 아닙니다.**  
-> 당신이 더 편하게 출발하기 위한 경로 선택입니다.
+> 당신이 더 편하게 출발하기 위한 **경로 선택**입니다.
 
 ---
 
@@ -24,7 +31,7 @@
 
 PBL은 **당신만의 기록 저장소**가 필요합니다.
 
-1. 위의 **PBL Starter Template** 링크로 이동
+1. **PBL Starter Template** 링크로 이동
 2. 우측 상단 **Fork** 버튼 클릭
 3. 저장소 이름은 **변경하지 말고 그대로 유지**
 4. 저장소는 **Public**으로 유지
@@ -56,7 +63,7 @@ Starter Template 안에는 이미 기록용 구조가 준비되어 있습니다.
 
 - `README.md`  
   → 프로젝트 전체 맥락 요약
-- `LOG.md` 또는 각 에피소드 폴더  
+- `LOG.md` 또는 각 Episode 폴더  
   → 실험 과정, 판단 변화, 실패 기록
 
 > 코드보다 **글이 먼저**여도 괜찮습니다.
