@@ -136,6 +136,17 @@ Tandem Robotics GitHub PBL 코칭은
 
 ---
 
+## 참고 자료 / 다운로드 (PDF)
+
+- [Episode 1페이지 요약 가이드](./resources/students/decision_episode_1page_summary.pdf)
+- [Episode 작성 가이드(초급자)](./resources/students/episode_writing_guide_beginner.pdf)
+- [과제 안내서](./resources/students/decision_log_assignment_guide.pdf)
+- [AI 사용 가이드](./resources/ai/ai_usage_guide_for_decision_log_pbl.pdf)
+- [교수/멘토 평가 기준](./resources/instructors/professor_evaluation_criteria.pdf)
+- [수업/과제 운영 설계 가이드](./resources/instructors/course_assignment_operation_design.pdf)
+
+---
+
 ## 한 줄 요약
 
 > **SelfAbot은 선수 학습이 아니라  
