@@ -2,8 +2,11 @@
 
 Official documentation hub for Tandem Robotics GitHub PBL coaching and learning paths.
 
-이 레포는 **Tandem Robotics GitHub PBL 코칭 서비스의 유일한 안내판**입니다.  
-처음 오셨다면, 아래 순서만 따라오시면 됩니다.
+이 레포는 **Tandem Robotics GitHub PBL 코칭 서비스의 공식 외부 문서 허브**입니다.  
+코드를 배포하거나 결과물을 보여주는 공간이 아니라,  
+**이 서비스가 어떤 판단 철학과 시스템 구조 위에서 작동하는지**를 설명하는 것이 목적입니다.
+
+처음 오셨다면, 아래 순서만 따라오시면 됩니다.  
 👉 **처음 오셨다면 여기부터:** [Start / 00. Quick Start](start/00_quick_start.md)
 
 ---
@@ -13,6 +16,9 @@ Official documentation hub for Tandem Robotics GitHub PBL coaching and learning 
 GitHub PBL은  
 코드를 “따라 치는 과정”이 아니라  
 **문제를 정의하고, 기록하고, 설계하는 경험**을 목표로 합니다.
+
+이 코칭 서비스에서 가장 중요한 것은  
+결과보다 **사고 과정과 판단의 연속성**입니다.
 
 시작하기 전에, **딱 한 가지만 확인하세요.**
 
@@ -35,7 +41,7 @@ GitHub PBL은
 
 ---
 
-### 🔹 선택 1 — SelfAbot (사전 가속 단계 · 선택)
+### 🔹 선택 1 — SelfAbot (선택형 사전 가속 단계)
 
 **SelfAbot은 기초 문법 강의가 아닙니다.**
 
@@ -71,7 +77,8 @@ SelfAbot은
 1. PBL Starter Template을 **Fork**
 2. 문제 정의 → 실험 → 기록을 **GitHub에 남기기**
 3. 결과보다 **사고 과정과 결정 이유**를 기록
-4. (선택) AI 코칭을 활용해 설계 확장
+4. (선택) AI 코칭을 활용해 설계 확장  
+   ※ AI는 정답을 제시하지 않고, 사용자의 판단을 보조합니다.
 
 ---
 
@@ -80,7 +87,7 @@ SelfAbot은
 🔻 🔻 🔻
 
 Tandem Robotics GitHub PBL 코칭은  
-**결과물 중심이 아닌, 사고·실험·판단의 기록을 기반으로 운영되는 학습 시스템**입니다.
+**결과물 중심이 아닌, 사고·실험·판단의 기록을 기반으로 운영되는 코칭 시스템**입니다.
 
 아래 문서들은 이 PBL 코칭을 이용하기 위한 **공식 기준 문서**이며,  
 모든 사용자(무료 / 유료)는 **동일한 기준**을 적용받습니다.
@@ -89,7 +96,7 @@ Tandem Robotics GitHub PBL 코칭은
   무료 사용자를 포함한 모든 사용자의 **최소 행동 의무 및 운영 기준**
 
 - 👉 **[PBL Support Guide](./SUPPORT.md)**  
-  질문·AI 코칭·멘토 코칭이 유효하게 작동하기 위해  
+  AI 코칭이 유효하게 작동하기 위해  
   **질문 전에 반드시 준비해야 할 정보와 형식**
 
 📌 위 기준은 코칭 품질 유지를 위한 최소 조건이며,  
@@ -128,11 +135,11 @@ Tandem Robotics GitHub PBL 코칭은
 
 ## 📌 이 Docs Hub를 사용하는 방법
 
-- 이 Docs Hub는 **GitHub PBL 코칭 서비스의 단일 진입점**입니다.
+- 이 Docs Hub는 **PBL 코칭 서비스의 단일 진입점**입니다.
 - 모든 사용자는  
   👉 여기서 **자신의 출발 지점(SelfAbot / PBL Starter)** 을 선택합니다.
 - 이후 단계(무료/유료, AI 코칭)는  
-  👉 **쇼핑몰 로그인 기반 서비스**와 연결됩니다.
+  👉 **외부 로그인 기반 서비스**와 연동됩니다.
 
 ---
 
@@ -149,6 +156,6 @@ Tandem Robotics GitHub PBL 코칭은
 
 ## 한 줄 요약
 
-> **SelfAbot은 선수 학습이 아니라  
-> Tandem Robotics PBL을 더 깊게 이해하기 위한  
-> 선택형 사전 가속 단계입니다.**
+> **Tandem Robotics PBL은  
+> 더 빠른 정답을 만드는 시스템이 아니라,  
+> 판단이 사라지지 않도록 설계된 코칭 시스템입니다.**
