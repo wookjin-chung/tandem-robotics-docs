@@ -1,0 +1,207 @@
+openapi: 3.0.3
+info:
+  title: PBL Coaching API
+  version: 1.0.0
+
+servers:
+  - url: /api/v1
+
+paths:
+  /judgment/logs:
+    post:
+      summary: Create a judgment log event
+      operationId: createJudgmentLog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateJudgmentLogRequest"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ok_CreateJudgmentLogData"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "500":
+          $ref: "#/components/responses/Error500"
+
+  /judgment/report:
+    get:
+      summary: Get judgment report (aggregated)
+      operationId: getJudgmentReport
+      parameters:
+        - in: query
+          name: from
+          schema: { type: string, format: date-time }
+        - in: query
+          name: to
+          schema: { type: string, format: date-time }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ok_GetJudgmentReportData"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "500":
+          $ref: "#/components/responses/Error500"
+
+components:
+  responses:
+    Error400:
+      description: Bad request
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorEnvelope" }
+    Error401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorEnvelope" }
+    Error500:
+      description: Internal server error
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorEnvelope" }
+
+  schemas:
+    # -------------------------
+    # Shared Envelopes (Single Source)
+    # -------------------------
+    RequestId:
+      type: string
+      description: Correlation id for tracing
+
+    ErrorCode:
+      type: string
+      enum:
+        - BAD_REQUEST
+        - UNAUTHORIZED
+        - FORBIDDEN
+        - NOT_FOUND
+        - CONFLICT
+        - RATE_LIMITED
+        - INTERNAL
+        - UPSTREAM_FAILED
+        - VALIDATION_FAILED
+
+    ErrorEnvelope:
+      type: object
+      required: [ok, error]
+      properties:
+        ok:
+          type: boolean
+          enum: [false]
+        error:
+          type: object
+          required: [code, message, requestId]
+          properties:
+            code:
+              $ref: "#/components/schemas/ErrorCode"
+            message:
+              type: string
+              description: Safe-to-display message (no PII, no stack traces)
+            requestId:
+              $ref: "#/components/schemas/RequestId"
+            details:
+              type: object
+              additionalProperties: true
+              description: Debug details (must not contain PII)
+
+    OkEnvelope:
+      type: object
+      required: [ok, data, requestId]
+      properties:
+        ok:
+          type: boolean
+          enum: [true]
+        requestId:
+          $ref: "#/components/schemas/RequestId"
+        data: {}
+
+    # -------------------------
+    # Endpoint Data Shapes
+    # -------------------------
+    CreateJudgmentLogData:
+      type: object
+      required: [eventId]
+      properties:
+        eventId:
+          type: string
+
+    Ok_CreateJudgmentLogData:
+      allOf:
+        - $ref: "#/components/schemas/OkEnvelope"
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/CreateJudgmentLogData"
+
+    JudgmentReportRange:
+      type: object
+      required: [from, to]
+      properties:
+        from: { type: string, format: date-time }
+        to: { type: string, format: date-time }
+
+    JudgmentReportData:
+      type: object
+      required: [range, metrics]
+      properties:
+        range:
+          $ref: "#/components/schemas/JudgmentReportRange"
+        metrics:
+          type: object
+          additionalProperties: true
+
+    Ok_GetJudgmentReportData:
+      allOf:
+        - $ref: "#/components/schemas/OkEnvelope"
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/JudgmentReportData"
+
+    # -------------------------
+    # Requests
+    # -------------------------
+    CreateJudgmentLogRequest:
+      type: object
+      required: [actor, context, event]
+      properties:
+        actor:
+          type: object
+          required: [actorType, actorId]
+          properties:
+            actorType:
+              type: string
+              enum: [user, admin, system]
+            actorId:
+              type: string
+        context:
+          type: object
+          required: [sessionId, pageId]
+          properties:
+            sessionId: { type: string }
+            pageId: { type: string }
+            referrer: { type: string, nullable: true }
+        event:
+          type: object
+          required: [eventName, at]
+          properties:
+            eventName: { type: string }
+            at: { type: string, format: date-time }
+            payload:
+              type: object
+              additionalProperties: true
+              description: Extensible payload; must not include PII
